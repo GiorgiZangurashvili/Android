@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.MainActivity">
+
+    <View
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_panel_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/switch_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start"
+        android:text="@string/switch_dark"
+        android:textSize="@dimen/switch_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/top_panel"
+        app:layout_constraintStart_toStartOf="@+id/top_panel"
+        app:layout_constraintTop_toTopOf="@+id/top_panel"
+        android:textColor="@color/black"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/add_button"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/top_panel"
+        app:layout_constraintEnd_toEndOf="@+id/top_panel"
+        app:layout_constraintTop_toTopOf="@+id/top_panel"
+        android:layout_marginEnd="@dimen/margin_start"
+        app:srcCompat="@drawable/add"
+        android:scaleType="fitXY"
+        android:background="@null"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/top_panel"
+        android:layout_marginTop="@dimen/margin_start"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

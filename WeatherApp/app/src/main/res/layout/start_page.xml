@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageButton
+        android:id="@+id/georgia"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/georgia"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/uk"
+        android:layout_marginTop="@dimen/low_space"
+        android:layout_marginBottom="@dimen/high_space"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:scaleType="fitXY"
+        android:clickable="true"
+        android:focusable="true"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="TODO" />
+
+    <ImageButton
+        android:id="@+id/uk"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        app:srcCompat="@drawable/uk"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/georgia"
+        app:layout_constraintEnd_toStartOf="@id/jamaica"
+        android:layout_marginBottom="@dimen/high_space"
+        android:layout_marginTop="@dimen/low_space"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:scaleType="fitXY"
+        android:clickable="true"
+        android:focusable="true"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="TODO" />
+
+    <ImageButton
+        android:id="@+id/jamaica"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        app:srcCompat="@drawable/jamaica"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/uk"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/low_space"
+        android:layout_marginBottom="@dimen/high_space"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:scaleType="fitXY"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/high_space"
+        android:textSize="@dimen/low_size"
+        android:text="@string/tbilisi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uk" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">assn1</string>
+    <string name="success">Success: 0</string>
+    <string name="fail">Fail: 0</string>
+    <string name="restart">Restart</string>
+    <string name="description">description</string>
+</resources>
